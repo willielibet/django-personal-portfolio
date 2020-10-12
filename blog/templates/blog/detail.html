@@ -1,0 +1,12 @@
+{% extends 'portfolio/basetemplate.html' %}
+{% block content %}
+
+{{ blog.title }}
+
+<h2>--{{ blog.date|date:'F jS Y' }}--</h2>
+
+<!--this is the place where we want the html styling-->
+{{ blog.description|safe }}
+
+{% endblock %}
+

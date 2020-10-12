@@ -1,0 +1,35 @@
+{% extends 'portfolio/basetemplate.html' %}
+{% block content %}
+
+<h1>Willie's Portfolio</h1>
+
+{% load static %}
+<a href="{% static 'portfolio/resume.docx' %}">Resume</a>
+<img src="{% static 'portfolio/water_river.png' %}">
+
+<br>
+<!-- link for all the blogs-->
+<a href="{% url 'blog:all_blogs' %}">Blogs</a>
+
+<!--Django's for loop/language-->
+{% for project in projects %}
+
+<!-- show me the values for projects -->
+<h2></h2>{{ project.title }}</h2>
+<p>{{ project.description }}</p>
+<img src="{{ project.image.url }}"" height=800 width=800>
+
+{% if project.url %}
+<br><a href="{{ project.url }}">Link</a>
+{% endif %}
+
+{% endfor %}
+{% endblock %}
+
+
+
+
+
+
+
+
