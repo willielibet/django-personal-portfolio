@@ -1,0 +1,10 @@
+### Django ###
+### These are the files are
+### folders that I do not want 
+### uploaded to github.
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+/static/
